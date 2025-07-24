@@ -12,13 +12,11 @@ import Image from "next/image";
 
 const navigationLeftSide = [
   { name: "Home", href: "#", current: true },
-  { name: "Oferta", href: "#", current: false },
-  { name: "Klub", href: "#", current: false },
+  { name: "O nas", href: "#", current: false },
 ];
 
 const navigationRightSide = [
-  { name: "Grafik", href: "#", current: false },
-  { name: "Galeria", href: "#", current: false },
+  { name: "Trening", href: "#", current: false },
   { name: "Kontakt", href: "#", current: false },
 ];
 
@@ -36,10 +34,7 @@ const RenderHalfMenu = (navElements: any[]) => {
           href={item.href}
           aria-current={item.current ? "page" : undefined}
           className={classNames(
-            item.current
-              ? " text-yellow-500 h-30"
-              : "text-white hover:text-white",
-            "block rounded-md px-3 py-2 text-base font-medium content-center"
+            "text-white hover:text-white block rounded-md px-10 py-2 text-xl uppercase font-black content-center"
           )}
         >
           {item.name}
@@ -51,7 +46,10 @@ const RenderHalfMenu = (navElements: any[]) => {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-blue-600 ml-24 mr-24 mt-10">
+    <Disclosure
+      as="nav"
+      className="bg-gray-500 absolute left-1/2 -translate-x-1/2 top-10"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
