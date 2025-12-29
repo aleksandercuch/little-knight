@@ -18,7 +18,7 @@ export const ImageCard = ({ imgSrc, title, description }: Props) => {
         priority
         sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
       />
-      <div className="absolute bottom-0 p-2 bg-blue-600 bg-opacity-75 w-full text-white">
+      <div className="absolute bottom-0 p-2 bg-gray-500 bg-opacity-75 w-full text-white">
         <h2 className="text-2xl">{title}</h2>
         <p>{description}</p>
       </div>

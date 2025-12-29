@@ -2,74 +2,48 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigationLeftSide = [
-  { name: "Home", href: "#", current: true },
-  { name: "O nas", href: "#", current: false },
+  { name: "Home", href: "#home", current: true },
+  { name: "O nas", href: "#about", current: false },
 ];
 
 const navigationRightSide = [
-  { name: "Trening", href: "#", current: false },
-  { name: "Kontakt", href: "#", current: false },
+  { name: "Trening", href: "#timetable", current: false },
+  { name: "Kontakt", href: "#contact", current: false },
 ];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const RenderHalfMenu = (navElements: any[]) => {
-  return (
-    <>
-      {navElements.map((item) => (
-        <DisclosureButton
-          key={item.name}
-          as="a"
-          href={item.href}
-          aria-current={item.current ? "page" : undefined}
-          className={classNames(
-            "text-white hover:text-white block rounded-md px-10 py-2 text-xl uppercase font-black content-center"
-          )}
-        >
-          {item.name}
-        </DisclosureButton>
-      ))}
-    </>
-  );
-};
-
 export default function Navbar() {
   return (
-    <Disclosure
-      as="nav"
-      className="bg-gray-500 absolute left-1/2 -translate-x-1/2 top-10"
-    >
+    <div className="bg-gray-500 absolute left-1/2 -translate-x-1/2 top-10 z-20 z-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="block h-6 w-6 group-data-[open]:hidden"
-              />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden h-6 w-6 group-data-[open]:block"
-              />
-            </DisclosureButton>
-          </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
             <div className="hidden sm:ml-6 sm:flex">
-              <div className="flex space-x-4">
-                {RenderHalfMenu(navigationLeftSide)}
+              <div className="flex space-x-4 items-center">
+                <a
+                  href="#home"
+                  className={classNames(
+                    "text-white hover:text-white block rounded-md px-10 text-xl uppercase font-black content-center h-16"
+                  )}
+                >
+                  Home
+                </a>
+                <a
+                  href="#about"
+                  className={classNames(
+                    "text-white hover:text-white block rounded-md px-10 text-xl uppercase font-black content-center h-16"
+                  )}
+                >
+                  O nas
+                </a>
               </div>
               <div className="flex space-x-4">
                 <Image
@@ -81,8 +55,23 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              <div className="flex space-x-4">
-                {RenderHalfMenu(navigationRightSide)}
+              <div className="flex space-x-4 items-center">
+                <a
+                  href="#timetable"
+                  className={classNames(
+                    "text-white hover:text-white block rounded-md px-10 text-xl uppercase font-black content-center h-16"
+                  )}
+                >
+                  Trening
+                </a>
+                <a
+                  href="#contact"
+                  className={classNames(
+                    "text-white hover:text-white block rounded-md px-10  text-xl uppercase font-black content-center h-16"
+                  )}
+                >
+                  Kontakt
+                </a>
               </div>
             </div>
           </div>
@@ -90,12 +79,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      <DisclosurePanel className="sm:hidden">
+      <div className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigationLeftSide.concat(navigationRightSide).map((item) => (
-            <DisclosureButton
+            <a
               key={item.name}
-              as="a"
               href={item.href}
               aria-current={item.current ? "page" : undefined}
               className={classNames(
@@ -106,10 +94,10 @@ export default function Navbar() {
               )}
             >
               {item.name}
-            </DisclosureButton>
+            </a>
           ))}
         </div>
-      </DisclosurePanel>
-    </Disclosure>
+      </div>
+    </div>
   );
 }

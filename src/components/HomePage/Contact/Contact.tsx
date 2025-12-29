@@ -11,31 +11,48 @@ import Image from "next/image";
 
 export const Contact = () => {
   return (
-    <div>
-      <h2 className="text-5xl pb-4">Kontakt</h2>
-      <p className="text-2xl pb-8">Napisz do nas!</p>
-      <div className="flex">
-        <div>
-          <p className="pb-3.5">
-            <FontAwesomeIcon icon={faPhone} className="mr-2" />{" "}
-            <span>+48 195 067 343</span>
-          </p>
-          <p className="pb-3.5">
-            <FontAwesomeIcon icon={faEnvelope} className="mr-2" />{" "}
-            <span>ciubaryk.prime@gmail.com</span>
-          </p>
-          <p className="pb-3.5">
-            <FontAwesomeIcon icon={faLocationDot} className="mr-2" />{" "}
-            <span>ul. Ciubarna 32, 80-120 Gdańsk</span>
-          </p>
-          <p className="pb-3.5">Odwiedź nasze social media:</p>
-          <p>
-            <FontAwesomeIcon icon={faFacebook} size="2x" className="mr-2" />{" "}
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </p>
-        </div>
-        formularz do pisania maila
+    <>
+      <div className="relative flex justify-center -mt-64">
+        <Image
+          className="relative"
+          src="/logo_white.png"
+          alt="Logo"
+          width={200}
+          height={40}
+          priority
+        />
       </div>
-    </div>
+
+      <div className="uppercase w-full flex justify-center mt-6">
+        <div className="grid grid-cols-[auto,1fr] gap-x-6 gap-y-4 items-center text-center">
+          <FontAwesomeIcon icon={faPhone} className="text-6xl" />
+          <p className="text-6xl text-start">+48 505 495 626</p>
+
+          <FontAwesomeIcon icon={faEnvelope} className="text-6xl" />
+          <p className="text-2xl text-start">
+            gdanska.szkola.fechtunku@gmail.com
+          </p>
+
+          <FontAwesomeIcon icon={faLocationDot} className="text-6xl" />
+          <p className="text-2xl text-start">ul. Malarzy 86B, 80-864 Gdańsk</p>
+
+          <FontAwesomeIcon icon={faFacebook} className="text-6xl" />
+          <a
+            href="https://www.facebook.com/profile.php?id=61576826655337"
+            className="text-2xl cursor-pointer text-start"
+          >
+            FB: Gdanska Szkola Fechtunku
+          </a>
+
+          <FontAwesomeIcon icon={faInstagram} className="text-6xl" />
+          <a
+            href="https://www.instagram.com/gdanskaszkolafechtunku?igsh=MWU1NGk1azQydHdwMQ=="
+            className="text-2xl cursor-pointer text-start"
+          >
+            IG: GdanskaSzkolaFechtunku
+          </a>
+        </div>
+      </div>
+    </>
   );
 };
