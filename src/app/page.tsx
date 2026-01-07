@@ -1,6 +1,5 @@
 "use client";
 
-import "flowbite";
 import { useEffect } from "react";
 
 // COMPONENTS
