@@ -7,12 +7,12 @@ type Question = {
 export const questions: Question[] = [
   {
     id: 1,
-    header: "What is flowbite?",
-    text: "Flowbite is an open-source library of interactive components built with Tailwind CSS.",
+    header: "Czy muszę mieć sprzęt na pierwszy trening?",
+    text: "Absolutnie nie! Wystarczy strój i buty sportowe, resztą zajmiemy się my! Przyda się też butelka wody. ",
   },
   {
     id: 2,
-    header: "Is there cookies available?",
+    header: "Czy macie pomysły na inne pytania?",
     text: "Flowbite is an open-source library of interactive components built with Tailwind CSS.",
   },
 ];
