@@ -1,117 +1,89 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-
-const navigationLeftSide = [
-  { name: "Home", href: "#", current: true },
-  { name: "Oferta", href: "#", current: false },
-  { name: "Klub", href: "#", current: false },
-];
-
-const navigationRightSide = [
-  { name: "Grafik", href: "#", current: false },
-  { name: "Galeria", href: "#", current: false },
-  { name: "Kontakt", href: "#", current: false },
-];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
-const RenderHalfMenu = (navElements: any[]) => {
-  return (
-    <>
-      {navElements.map((item) => (
-        <DisclosureButton
-          key={item.name}
-          as="a"
-          href={item.href}
-          aria-current={item.current ? "page" : undefined}
-          className={classNames(
-            item.current
-              ? " text-yellow-500 h-30"
-              : "text-white hover:text-white",
-            "block rounded-md px-3 py-2 text-base font-medium content-center"
-          )}
-        >
-          {item.name}
-        </DisclosureButton>
-      ))}
-    </>
-  );
-};
+import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
+  const socials = [
+    {
+      href: "https://www.instagram.com/gdanskaszkolafechtunku/",
+      icon: <FaInstagram />,
+      bg: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
+    },
+    {
+      href: "https://www.facebook.com/profile.php?id=61576826655337",
+      icon: <FaFacebookF />,
+      bg: "bg-blue-700",
+    },
+  ];
+
   return (
-    <Disclosure as="nav" className="bg-gray-500 ml-24 mr-24 mt-10">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="block h-6 w-6 group-data-[open]:hidden"
-              />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden h-6 w-6 group-data-[open]:block"
-              />
-            </DisclosureButton>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-            <div className="hidden sm:ml-6 sm:flex">
-              <div className="flex space-x-4">
-                {RenderHalfMenu(navigationLeftSide)}
-              </div>
-              <div className="flex space-x-4">
-                <Image
-                  className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-                  src="/logo.png"
-                  alt="Next.js Logo"
-                  width={120}
-                  height={40}
-                  priority
-                />
-              </div>
-              <div className="flex space-x-4">
-                {RenderHalfMenu(navigationRightSide)}
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
+    <footer className="w-full text-white bg-black">
+      {/* Logos */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+          <a href="https://polish-hema-federation.pl/en">
+            <Image
+              src="/phf_logo.png"
+              alt="PHF Logo"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
+          </a>
+
+          <a href="https://histfenc.eu/pl/">
+            <Image
+              src="/spes_logo.png"
+              alt="Spes Logo"
+              width={180}
+              height={160}
+              className="object-contain"
+            />
+          </a>
+
+          <a href="https://kriegerweapons.com/">
+            <Image
+              src="/logokrieger.png"
+              alt="Krieger Weapons Logo"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
+          </a>
+
+          <a href="https://sparringglove.com/pl/?v=288404204e3d">
+            <Image
+              src="/sparring_gloves_logo.jpg"
+              alt="Sparring Gloves Logo"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
+          </a>
         </div>
       </div>
 
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigationLeftSide.concat(navigationRightSide).map((item) => (
-            <DisclosureButton
-              key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? "page" : undefined}
-              className={classNames(
-                item.current
-                  ? "bg-gray-900 text-white"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                "block rounded-md px-3 py-2 text-base font-medium"
-              )}
-            >
-              {item.name}
-            </DisclosureButton>
+      {/* Socials + copyright */}
+      <div className="bg-black/80 py-8">
+        <ul className="flex justify-center gap-4 mb-4">
+          {socials.map((social, index) => (
+            <li key={index}>
+              <Link
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white text-lg sm:text-xl transition-transform hover:scale-110 ${social.bg}`}
+              >
+                {social.icon}
+              </Link>
+            </li>
           ))}
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
+        </ul>
+
+        <p className="text-center text-gray-300 text-sm italic px-4">
+          &copy; 2026 Gdańska Szkoła Fechtunku. All rights reserved.
+        </p>
+      </div>
+    </footer>
   );
 }

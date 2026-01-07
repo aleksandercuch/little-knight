@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${inter.className} bg-[url('/bg.jpg')]`}>
         <div>
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
