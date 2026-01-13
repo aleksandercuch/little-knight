@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div className="pt-28">
       {/* Hero section */}
-      <div className="relative w-full h-[50vh] overflow-hidden font-fira">
+      <div className="relative w-full h-[50vh] overflow-hidden font-mono">
         {/* Background image */}
         <div className="absolute inset-0 bg-[url('/background-about.png')] bg-cover bg-bottom">
           {/* Gradient overlay */}
@@ -30,7 +30,7 @@ export default function Page() {
       </div>
 
       {/* Article content */}
-      <div className=" text-gray-900">
+      <div className=" text-gray-900 font-mono">
         <article className=" bg-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg">
           {/* Image right */}
           <div className="relative float-right ml-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
