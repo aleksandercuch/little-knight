@@ -28,7 +28,7 @@ export const Carousel = () => {
             className="hidden duration-700 ease-in-out z-0"
             data-carousel-item="active"
           >
-            <div className="absolute inset-0 bg-[url('/background-2.png')] bg-cover bg-center">
+            <div className="absolute inset-0 bg-[url('/background-1.png')] bg-cover bg-center">
               <div
                 className="absolute inset-0 pointer-events-none
                 bg-gradient-to-b
@@ -44,7 +44,7 @@ export const Carousel = () => {
             className="hidden duration-700 ease-in-out z-0"
             data-carousel-item
           >
-            <div className="absolute inset-0 bg-[url('/background-1.png')] bg-cover bg-center">
+            <div className="absolute inset-0 bg-[url('/background-2.png')] bg-cover bg-center">
               <div
                 className="absolute inset-0 pointer-events-none
                 bg-gradient-to-b
@@ -60,7 +60,7 @@ export const Carousel = () => {
             className="hidden duration-700 ease-in-out z-0"
             data-carousel-item
           >
-            <div className="absolute inset-0 bg-[url('/background-2.png')] bg-cover bg-center">
+            <div className="absolute inset-0 bg-[url('/background-1.png')] bg-cover bg-center">
               <div
                 className="absolute inset-0 pointer-events-none
                 bg-gradient-to-b
@@ -76,7 +76,7 @@ export const Carousel = () => {
             className="hidden duration-700 ease-in-out z-0"
             data-carousel-item
           >
-            <div className="absolute inset-0 bg-[url('/background-1.png')] bg-cover bg-center">
+            <div className="absolute inset-0 bg-[url('/background-2.png')] bg-cover bg-center">
               <div
                 className="absolute inset-0 pointer-events-none
                 bg-gradient-to-b
