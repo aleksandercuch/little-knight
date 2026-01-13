@@ -21,7 +21,7 @@ export default function Page() {
 
         {/* Centered text box */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-black/80 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
+          <div className="bg-black/70 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-center">
               O Gdańskiej Szkole Fechtunku
             </h1>
@@ -30,8 +30,8 @@ export default function Page() {
       </div>
 
       {/* Article content */}
-      <div className=" text-gray-900 font-mono">
-        <article className=" bg-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg">
+      <div className="text-gray-900 font-mono">
+        <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg">
           {/* Image right */}
           <div className="relative float-right ml-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image
@@ -70,7 +70,7 @@ export default function Page() {
           {/* Image left */}
           <div className="relative float-left mr-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image
-              src="/logo.png"
+              src="/logo_white.png"
               alt="Logo Gdańskiej Szkoły Fechtunku"
               width={500}
               height={600}
