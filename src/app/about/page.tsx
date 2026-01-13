@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div className="pt-28">
       {/* Hero section */}
-      <div className="relative w-full h-[50vh] overflow-hidden font-fira ">
+      <div className="relative w-full h-[50vh] overflow-hidden font-fira">
         {/* Background image */}
         <div className="absolute inset-0 bg-[url('/background-about.png')] bg-cover bg-bottom">
           {/* Gradient overlay */}
@@ -91,7 +91,10 @@ export default function Page() {
             European Martial Arts) – współczesną społeczność naukowców,
             rekonstruktorów i sportowców z całego świata, którzy poprzez badania
             dawnych traktatów szermierczych odtwarzają europejskie sztuki walki
-            sprzed epoki broni palnej.
+            sprzed epoki broni palnej. Od 2025 roku jesteśmy członkiem
+            wspierającym Polskiego Związku Szermierki Historycznej -
+            ogólnopolskiej organizacji zrzeszających kluby i trenerów w całej
+            Polsce.
           </p>
 
           <p className="mt-6">

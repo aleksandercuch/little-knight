@@ -22,7 +22,11 @@ export default function Footer() {
       {/* Logos */}
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
-          <a href="https://polish-hema-federation.pl/en">
+          <Link
+            href="https://polish-hema-federation.pl/en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/phf_logo.png"
               alt="PHF Logo"
@@ -30,9 +34,13 @@ export default function Footer() {
               height={160}
               className="object-contain"
             />
-          </a>
+          </Link>
 
-          <a href="https://histfenc.eu/pl/">
+          <Link
+            href="https://histfenc.eu/pl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/spes_logo.png"
               alt="Spes Logo"
@@ -40,9 +48,13 @@ export default function Footer() {
               height={160}
               className="object-contain"
             />
-          </a>
+          </Link>
 
-          <a href="https://kriegerweapons.com/">
+          <Link
+            href="https://kriegerweapons.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/logokrieger.png"
               alt="Krieger Weapons Logo"
@@ -50,9 +62,13 @@ export default function Footer() {
               height={160}
               className="object-contain"
             />
-          </a>
+          </Link>
 
-          <a href="https://sparringglove.com/pl/?v=288404204e3d">
+          <Link
+            href="https://sparringglove.com/pl/?v=288404204e3d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/sparring_gloves_logo.jpg"
               alt="Sparring Gloves Logo"
@@ -60,7 +76,7 @@ export default function Footer() {
               height={160}
               className="object-contain"
             />
-          </a>
+          </Link>
         </div>
       </div>
 
