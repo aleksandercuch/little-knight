@@ -26,11 +26,11 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-fira h-28"
+      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-fira h-32 md:h-28"
     >
       {({ open }) => (
         <>
-          {/* ===== DESKTOP (UNCHANGED) ===== */}
+          {/* DESKTOP */}
           <div className="hidden sm:block pt-10 pb-2">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">

@@ -1,14 +1,9 @@
-import { Fira_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { fira } from "./fonts";
 
 // Load Fira Sans globally with weights
-const fira = Fira_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-fira",
-});
 
 export const metadata = {
   title: "Gdańska Szkoła Fechtunku",
