@@ -13,9 +13,9 @@ export default function Page() {
   return (
     <main className="flex flex-col items-center font-fira z-10">
       <Carousel />
-      <div className="bg-black/50 text-white px-6 py-16 leading-relaxed text-lg font-mono w-full">
+      {/* <div className="bg-black/50 text-white px-6 py-16 leading-relaxed text-lg font-mono w-full">
         <About />
-      </div>
+      </div> */}
     </main>
   );
 }
