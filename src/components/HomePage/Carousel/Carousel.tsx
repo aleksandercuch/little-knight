@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-const slidesMobile = ["/sword.jpg", "/hema_fighter.jpg", "/fencer.png"];
-
-const slidesDesktop = [
-  "/background-1.png",
-  "/background-2.png",
-  "/background-1.png",
-  "/background-2.png",
+const slidesMobile = [
+  "/mobile-carousel-1.png",
+  "/mobile-carousel-2.png",
+  "/mobile-carousel-3.png",
+  "/mobile-carousel-4.png",
+  "/mobile-carousel-5.png",
+  "/mobile-carousel-6.png",
 ];
+
+const slidesDesktop = ["/desktop-carousel-2.png", "/desktop-carousel-3.png"];
 
 export const Carousel = () => {
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
@@ -55,29 +57,29 @@ export const Carousel = () => {
   return (
     <>
       {/* ================= MOBILE CAROUSEL ================= */}
-      <div className="relative w-full block md:hidden h-[calc(100vh-112px)] mt-28 overflow-hidden">
+      <div
+        className="
+    relative w-full block md:hidden
+    h-[calc(100svh-112px)]
+    mt-28
+    overflow-hidden
+  "
+      >
         {slidesMobile.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center duration-700 ease-in-out ${
-              currentSlideMobile === index
-                ? "opacity-100 z-10"
-                : "opacity-0 z-0"
-            }`}
-            style={{ backgroundImage: `url(${src})` }}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out
+        ${currentSlideMobile === index ? "opacity-100 z-10" : "opacity-0 z-0"}
+      `}
+            style={{
+              backgroundImage: `url(${src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/30 to-transparent" />
           </div>
         ))}
-
-        {/* Text overlay */}
-        <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none font-mono">
-          <div className="bg-black/50 px-6 py-4 sm:px-10 sm:py-6 rounded-md shadow-lg w-full max-w-4xl">
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-center">
-              Tutaj przeszłość spotyka się z teraźniejszością
-            </h1>
-          </div>
-        </div>
       </div>
 
       {/* ================= DESKTOP CAROUSEL ================= */}

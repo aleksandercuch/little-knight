@@ -18,9 +18,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full text-white bg-black">
+    <footer className="w-full text-white">
       {/* Logos */}
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="mx-auto px-6 py-10 bg-black w-full">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
           <Link
             href="https://polish-hema-federation.pl/en"
@@ -28,7 +28,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/phf_logo.png"
+              src="/phf_logo.jfif"
               alt="PHF Logo"
               width={160}
               height={160}
@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
 
       {/* Socials + copyright */}
-      <div className="bg-black/80 py-8">
+      <div className="py-8 bg-black/40">
         <ul className="flex justify-center gap-4 mb-4">
           {socials.map((social, index) => (
             <li key={index}>
