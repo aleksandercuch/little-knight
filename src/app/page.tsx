@@ -12,14 +12,16 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center font-fira z-10">
+    <main className="flex flex-col items-center z-10">
       <Carousel />
-      <div className="w-full bg-black text-white px-6 py-20">
-        <p className="max-w-5xl mx-auto text-center text-lg md:text-xl leading-relaxed tracking-wide font-light font-mono">
-          Gdańska Szkoła Fechtunku to miesce, gdzie pasja do walki bronią białą
-          łączy się z realnym rozwojem sprawności, koncentracji i charakteru.
-          Oferujemy zajęcia z technik historycznych tradycyjnie i bez uprzedzeń
-          - niezależnie od wieku czy poziomu zaawansowania.
+      <div className="w-full bg-black text-white px-6 py-20 ">
+        <p className="max-w-5xl mx-auto text-center md:text-xl leading-relaxed tracking-widest font-light text-sm font-bebas">
+          Gdańska Szkoła Fechtunku to miejsce, gdzie pasja do szermierki
+          historycznej łączy się z realnym rozwojem sprawności, koncentracji i
+          charakteru. Oferujemy zajęcia z technik historycznych niezależnie od
+          poziomu zaawansowania. Przyjdź i sprawdź jak zapomniane techniki
+          dawnych mistrzów łączą się z współczesną metodyką sportową. Dołącz do
+          nas i odkryj historię na nowo!
         </p>
       </div>
       <BulletSection />

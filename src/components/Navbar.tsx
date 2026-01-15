@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-mono h-32 md:h-28"
+      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full h-32 md:h-28 font-bebas tracking-widest"
     >
       {({ open }) => (
         <>

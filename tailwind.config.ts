@@ -16,7 +16,7 @@ const config: Config = {
         "front-bg": "url('/bg.jpg')",
       },
       fontFamily: {
-        fira: ['"Fira Sans"', "sans-serif"],
+        bebas: ["var(--font-bebas)", "sans-serif"],
       },
     },
   },

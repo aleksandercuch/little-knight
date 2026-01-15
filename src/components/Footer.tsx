@@ -18,9 +18,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full text-white">
+    <footer className="w-full text-white bg-black">
       {/* Logos */}
-      <div className="mx-auto px-6 py-10 bg-black w-full">
+      <div className="mx-auto px-6 py-10  w-full">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
           <Link
             href="https://polish-hema-federation.pl/en"
@@ -28,7 +28,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/phf_logo.jfif"
+              src="/phf_logo.png"
               alt="PHF Logo"
               width={160}
               height={160}
@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
 
       {/* Socials + copyright */}
-      <div className="py-8 bg-black/40">
+      <div className="py-8">
         <ul className="flex justify-center gap-4 mb-4">
           {socials.map((social, index) => (
             <li key={index}>
@@ -97,7 +97,7 @@ export default function Footer() {
           ))}
         </ul>
 
-        <p className="text-center text-gray-300 text-sm italic px-4">
+        <p className="text-center text-gray-300 text-sm italic px-4 font-bebas tracking-widest">
           &copy; 2026 Gdańska Szkoła Fechtunku. All rights reserved.
         </p>
       </div>

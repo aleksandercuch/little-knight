@@ -59,11 +59,11 @@ export const Carousel = () => {
       {/* ================= MOBILE CAROUSEL ================= */}
       <div
         className="
-    relative w-full block md:hidden
-    h-[calc(100svh-112px)]
-    mt-28
-    overflow-hidden
-  "
+          relative w-full block md:hidden
+          h-[calc(65svh)]
+          mt-28
+          overflow-hidden
+        "
       >
         {slidesMobile.map((src, index) => (
           <div
@@ -83,7 +83,15 @@ export const Carousel = () => {
       </div>
 
       {/* ================= DESKTOP CAROUSEL ================= */}
-      <div className="relative w-full hidden md:block h-[calc(100vh-112px)] mt-28 overflow-hidden rounded-lg">
+      <div
+        className="
+        relative w-full hidden md:block mt-28 overflow-hidden rounded-lg
+        h-[calc(100vh-112px)]
+        max-h-[900px]
+        md:h-[calc(70vh-112px)]
+        lg:h-[calc(100vh-112px)]
+      "
+      >
         {slidesDesktop.map((src, index) => (
           <div
             key={index}
