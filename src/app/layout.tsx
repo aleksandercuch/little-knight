@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
-import { fira } from "./fonts";
+import { Bebas_Neue } from "next/font/google";
 
 // Load Fira Sans globally with weights
 
@@ -11,14 +11,21 @@ export const metadata = {
     "Fundacja Gdańska Szkoła Fechtunku – tradycja, sport i edukacja dawnej sztuki walki",
 };
 
+export const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"], // Bebas Neue has only one weight
+  display: "swap",
+  variable: "--font-bebas",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className={fira.variable}>
-      <body className="font-fira bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
+    <html lang="pl" className={bebas.variable}>
+      <body className="bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
         <div className="flex flex-col min-h-screen">
           <Navbar />
 
