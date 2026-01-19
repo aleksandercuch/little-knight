@@ -60,7 +60,8 @@ export const Carousel = () => {
       <div
         className="
           relative w-full block md:hidden
-          h-[calc(65svh)]
+          min-h-[60svh]
+          max-h-[85svh]
           mt-28
           overflow-hidden
         "
