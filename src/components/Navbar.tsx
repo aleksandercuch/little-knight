@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import {
   Disclosure,
   DisclosureButton,
@@ -23,30 +24,48 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Scroll detection
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <Disclosure
       as="nav"
-      className="bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full h-32 md:h-28 font-bebas tracking-widest"
+      className={classNames(
+        "bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300"
+      )}
     >
       {({ open }) => (
         <>
           {/* DESKTOP */}
-          <div className="hidden sm:block pt-10 pb-2">
+          <div
+            className={classNames(
+              "hidden sm:block transition-all duration-300 pt-10 pb-2",
+              scrolled ? "mb-10" : ""
+            )}
+          >
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="flex flex-1 items-center justify-center">
                   <div className="flex">
+                    {/* LEFT */}
                     <div className="flex space-x-4 items-center">
                       {navigationLeftSide.map((item) => (
                         <div key={item.name} className="w-44">
                           <a
                             href={item.href}
-                            className={classNames(
-                              "relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16",
-                              "after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white",
-                              "after:transition-all after:duration-300",
-                              "hover:after:w-1/2 hover:after:left-1/4"
-                            )}
+                            className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
+                              after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                              after:transition-all after:duration-300
+                              hover:after:w-1/2 hover:after:left-1/4"
                           >
                             {item.name}
                           </a>
@@ -54,28 +73,27 @@ export default function Navbar() {
                       ))}
                     </div>
 
-                    <div className="flex space-x-4 px-8">
+                    {/* LOGO */}
+                    <div className={classNames("flex items-center px-8")}>
                       <Image
-                        src="/logo_white.png"
+                        src={"/logo_white.png"}
                         alt="Logo"
                         width={120}
                         height={40}
                         priority
-                        className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                       />
                     </div>
 
+                    {/* RIGHT */}
                     <div className="flex space-x-4 items-center">
                       {navigationRightSide.map((item) => (
                         <div key={item.name} className="w-44">
                           <a
                             href={item.href}
-                            className={classNames(
-                              "relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16",
-                              "after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white",
-                              "after:transition-all after:duration-300",
-                              "hover:after:w-1/2 hover:after:left-1/4"
-                            )}
+                            className="relative text-white text-center block rounded-md px-10 text-xl uppercase font-black content-center h-16
+                              after:absolute after:left-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white
+                              after:transition-all after:duration-300
+                              hover:after:w-1/2 hover:after:left-1/4"
                           >
                             {item.name}
                           </a>
@@ -88,6 +106,7 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* MOBILE */}
           <div className="sm:hidden flex items-center justify-between h-20 px-4 relative">
             <DisclosureButton className="text-white p-2">
               {open ? (

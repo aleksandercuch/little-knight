@@ -31,7 +31,7 @@ export default function Page() {
 
       {/* Article content */}
       <div className="text-gray-900">
-        <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-bebas tracking-widest">
+        <article className="bg-black/50 text-white max-w-5xl mx-auto px-6 py-16 leading-relaxed text-lg font-lato tracking-widest">
           {/* Image right */}
           <div className="relative float-right ml-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image

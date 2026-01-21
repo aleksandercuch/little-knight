@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import { Bebas_Neue } from "next/font/google";
+import { lato } from "./fonts";
 
 // Load Fira Sans globally with weights
 
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className={bebas.variable}>
+    <html lang="pl" className={`${bebas.variable} ${lato.variable}`}>
       <body className="bg-[url('/bg.jpg')] bg-cover bg-center min-h-screen">
         <div className="flex flex-col min-h-screen">
           <Navbar />
