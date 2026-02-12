@@ -22,7 +22,7 @@ export const BulletSection = () => {
         <div className="flex flex-col items-center">
           <CiDumbbell className="mb-4 text-white/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl" />
           <h3 className="text-lg sm:text-xl font-semibold mb-3">
-            Profesjonalny sprzęt zapewniony
+            Zapewniamy profesjonalny sprzęt
           </h3>
           <p className="text-sm sm:text-base leading-relaxed opacity-90 font-lato">
             Nad treningami czuwają doświadczeni instruktorzy.
