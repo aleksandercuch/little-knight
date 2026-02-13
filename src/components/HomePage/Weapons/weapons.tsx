@@ -54,14 +54,15 @@ const WeaponCard = ({ title, description, image }: any) => {
 
 export const Weapons = () => {
   return (
-    <section className="w-full py-24 px-6">
+    <section className="w-full py-6 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div
           className="
           grid
           grid-cols-1
           sm:grid-cols-2
-          gap-10
+          gap-6
+          md:gap-32
         "
         >
           <WeaponCard
@@ -71,8 +72,8 @@ export const Weapons = () => {
           />
 
           <WeaponCard
-            title="Szabla wojskowa"
-            image="/sword.jpg"
+            title="Szabla bojowa"
+            image="/szabla1.webp"
             description="Narzędzie walki łączące w sobie finezję, szybkość i elegancję... Oraz ten niepowtarzalny polski charakter."
           />
         </div>
