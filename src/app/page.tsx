@@ -5,6 +5,7 @@ import { useEffect } from "react";
 // COMPONENTS
 import { Carousel } from "@/components/HomePage/Carousel/Carousel";
 import { BulletSection } from "@/components/HomePage/BulletSection/BulletSection";
+import { Weapons } from "@/components/HomePage/Weapons/weapons";
 
 export default function Page() {
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Page() {
         </p>
       </div>
       <BulletSection />
-
+      <Weapons />
       {/* <div className="bg-black/50 text-white px-6 py-16 leading-relaxed text-lg font-mono w-full">
         <About />
       </div> */}

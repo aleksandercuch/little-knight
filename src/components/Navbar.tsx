@@ -40,7 +40,7 @@ export default function Navbar() {
     <Disclosure
       as="nav"
       className={classNames(
-        "bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300"
+        "bg-black fixed left-1/2 -translate-x-1/2 z-50 w-full font-bebas tracking-widest transition-all duration-300",
       )}
     >
       {({ open }) => (
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div
             className={classNames(
               "hidden sm:block transition-all duration-300 pt-10 pb-2",
-              scrolled ? "mb-10" : ""
+              scrolled ? "mb-10" : "",
             )}
           >
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -107,7 +107,7 @@ export default function Navbar() {
           </div>
 
           {/* MOBILE */}
-          <div className="sm:hidden flex items-center justify-between h-20 px-4 relative">
+          <div className="sm:hidden flex items-center justify-between h-40 px-4 relative">
             <DisclosureButton className="text-white p-2">
               {open ? (
                 <XMarkIcon className="h-8 w-8" />
@@ -118,7 +118,7 @@ export default function Navbar() {
 
             <Image
               src="/logo_white.png"
-              className="relative top-5"
+              className="relative"
               alt="Logo"
               width={100}
               height={40}

@@ -37,11 +37,11 @@ export const Carousel = () => {
   const prevSlide = (isMobile: boolean) => {
     if (isMobile) {
       setCurrentSlideMobile((prev) =>
-        prev === 0 ? slidesMobile.length - 1 : prev - 1
+        prev === 0 ? slidesMobile.length - 1 : prev - 1,
       );
     } else {
       setCurrentSlideDesktop((prev) =>
-        prev === 0 ? slidesDesktop.length - 1 : prev - 1
+        prev === 0 ? slidesDesktop.length - 1 : prev - 1,
       );
     }
   };
@@ -86,13 +86,14 @@ export const Carousel = () => {
       {/* ================= DESKTOP CAROUSEL ================= */}
       <div
         className="
-        relative w-full hidden md:block mt-28 overflow-hidden rounded-lg
-        h-[calc(100vh-112px)]
-        max-h-[900px]
-        md:h-[calc(70vh-112px)]
-        lg:h-[calc(100vh-112px)]
-      "
+    relative w-full hidden md:block mt-28 overflow-hidden rounded-lg
+    h-[calc(100vh-112px)]
+    max-h-[900px]
+    md:h-[calc(70vh-112px)]
+    lg:h-[calc(100vh-112px)]
+  "
       >
+        {/* SLIDES */}
         {slidesDesktop.map((src, index) => (
           <div
             key={index}
@@ -107,20 +108,45 @@ export const Carousel = () => {
           </div>
         ))}
 
-        {/* Controls */}
+        {/* ================= CENTER TEXT ================= */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+          <h1
+            className="
+              font-coldiac
+              text-white
+              text-center
+              tracking-wide
+              px-6
+              text-3xl
+              md:text-5xl
+              drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]
+              uppercase
+              bg-black/40
+              rounded-xl
+              p-5
+              relative
+              top-36
+            "
+          >
+            Tutaj przeszłość spotyka się z teraźniejszością
+          </h1>
+        </div>
+
+        {/* CONTROLS */}
         <button
           onClick={() => prevSlide(false)}
           className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4"
         >
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm hover:bg-white/50 transition">
             ‹
           </span>
         </button>
+
         <button
           onClick={() => nextSlide(false)}
           className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4"
         >
-          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30">
+          <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm hover:bg-white/50 transition">
             ›
           </span>
         </button>
