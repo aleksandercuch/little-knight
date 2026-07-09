@@ -13,7 +13,7 @@ export default function Page() {
       {/* Hero section */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
-          src="/background-about.png"
+          src="/background-about.webp"
           alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom"

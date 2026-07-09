@@ -5,15 +5,15 @@ import { translations } from "@/messages/translations";
 import { useLanguage } from "@/context/LanguageContext";
 
 const slidesMobile = [
-  "/mobile-carousel-1.png",
-  "/mobile-carousel-2.png",
-  "/mobile-carousel-3.png",
-  "/mobile-carousel-4.png",
-  "/mobile-carousel-5.png",
-  "/mobile-carousel-6.png",
+  "/mobile-carousel-1.webp",
+  "/mobile-carousel-2.webp",
+  "/mobile-carousel-3.webp",
+  "/mobile-carousel-4.webp",
+  "/mobile-carousel-5.webp",
+  "/mobile-carousel-6.webp",
 ];
 
-const slidesDesktop = ["/desktop-carousel-2.png", "/desktop-carousel-3.png"];
+const slidesDesktop = ["/desktop-carousel-2.webp", "/desktop-carousel-3.webp"];
 
 export const Carousel = () => {
   const { lang } = useLanguage();

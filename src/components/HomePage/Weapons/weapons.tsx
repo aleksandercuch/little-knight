@@ -92,7 +92,7 @@ export const Weapons = () => {
   const weapons = [
     {
       title: "Miecz długi",
-      image: "/sword.jpg",
+      image: "/sword.webp",
       description:
         "Historyczna broń dwuręczna, oferująca ogromną różnorodność technik ofensywnych i defensywnych.",
       extendedDescription:

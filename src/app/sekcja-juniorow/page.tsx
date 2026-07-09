@@ -16,7 +16,7 @@ export default function Page() {
       {/* Hero and article sections */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
-          src="/background-about.png"
+          src="/background-about.webp"
           alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom"
@@ -38,7 +38,7 @@ export default function Page() {
           <p className="mt-6">{t.Junior.paragraphTwo}</p>
           <div className="w-full my-6 relative h-[400px] sm:h-[600px]">
             <Image
-              src="/junior.jpg"
+              src="/junior.webp"
               alt="Trening szermierki w Gdańsku"
               fill
               className="object-cover rounded-lg"

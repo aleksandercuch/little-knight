@@ -13,7 +13,7 @@ export default function Page() {
       {/* Hero section */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
-          src="/background-about.png"
+          src="/background-about.webp"
           alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom opacity-0 transition-opacity duration-700"
@@ -42,7 +42,7 @@ export default function Page() {
           {/* Image right */}
           <div className="relative float-right ml-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image
-              src="/petervondanzig.jpg"
+              src="/petervondanzig.webp"
               alt="Gdańska Szkoła Fechtunku"
               width={500}
               height={600}
@@ -60,7 +60,7 @@ export default function Page() {
           {/* Image left */}
           <div className="relative float-left mr-8 mb-6 w-full sm:w-1/2 lg:w-1/3">
             <Image
-              src="/logo_white.png"
+              src="/logo_white.webp"
               alt="Trening szermierki w Gdańsku"
               width={500}
               height={600}

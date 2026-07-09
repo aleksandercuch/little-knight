@@ -116,7 +116,7 @@ export default function Navbar() {
                   <div className="flex items-center px-8">
                     <Link href="/">
                       <Image
-                        src="/logo_white.png"
+                        src="/logo_white.webp"
                         alt="Logo"
                         width={120}
                         height={40}
@@ -156,7 +156,7 @@ export default function Navbar() {
             </DisclosureButton>
             <Link href="/">
               <Image
-                src="/logo_white.png"
+                src="/logo_white.webp"
                 alt="Logo"
                 width={100}
                 height={40}

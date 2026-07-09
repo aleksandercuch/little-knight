@@ -2,7 +2,7 @@ export const schema = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
   name: "Gdańska Szkoła Fechtunku",
-  image: "https://gdanskaszkolafechtunku.pl/logo.png",
+  image: "https://gdanskaszkolafechtunku.pl/logo.webp",
   url: "https://gdanskaszkolafechtunku.pl/",
   telephone: "+48XXXXXXXXX",
   address: {

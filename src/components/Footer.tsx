@@ -21,14 +21,14 @@ export default function Footer() {
     <footer className="w-full text-white bg-black">
       {/* Logos */}
       <div className="mx-auto px-6 py-10  w-full">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 place-items-center">
           <Link
             href="https://polish-hema-federation.pl/en"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              src="/phf_logo.png"
+              src="/phf_logo.webp"
               alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
@@ -42,7 +42,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/spes_logo.png"
+              src="/spes_logo.webp"
               alt="Trening szermierki w Gdańsku"
               width={180}
               height={160}
@@ -56,7 +56,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/logokrieger.png"
+              src="/logokrieger.webp"
               alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
@@ -70,7 +70,20 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/sparring_gloves_logo.jpg"
+              src="/sparring_gloves_logo.webp"
+              alt="Trening szermierki w Gdańsku"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
+          </Link>
+          <Link
+            href="https://sigiforge.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/sigi-white.png"
               alt="Trening szermierki w Gdańsku"
               width={160}
               height={160}
