@@ -11,7 +11,7 @@ export const Gallery = () => {
         description={"Rodowita sztuka walki każdego Gdańszczanina"}
       />
       <ImageCard
-        imgSrc={"/turniej.png"}
+        imgSrc={"/turniej.webp"}
         title={"Treningi szabli historycznej"}
         description={"Lekcje władania bronią jednoręczną"}
       />

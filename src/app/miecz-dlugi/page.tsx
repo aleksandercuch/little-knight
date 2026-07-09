@@ -13,7 +13,7 @@ export default function Page() {
       {/* Header Image */}
       <div className="relative w-full h-[50vh] overflow-hidden">
         <Image
-          src="/background-about.png"
+          src="/background-about.webp"
           alt="Trening szermierki w Gdańsku"
           fill
           className="object-cover object-bottom"
@@ -42,7 +42,7 @@ export default function Page() {
           <div className="flex flex-col md:flex-row md:gap-8 items-start">
             <div className="w-full md:w-1/3 flex-shrink-0 mb-6 md:mb-0">
               <Image
-                src="/sword.jpg"
+                src="/sword.webp"
                 alt="Trening szermierki w Gdańsku"
                 width={400}
                 height={600}
